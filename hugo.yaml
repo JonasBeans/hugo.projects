@@ -1,6 +1,6 @@
-baseURL: https://example.org/
+baseURL: https://projects.bytesbyboon.be/
 languageCode: en-us
-title: My New Hugo Site
+title: Bytes by Boon projects
 theme: ["PaperMod"]
 menu:
   main:
