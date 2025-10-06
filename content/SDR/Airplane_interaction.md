@@ -16,20 +16,22 @@ The most active one, at that time, was: 118,250 Mhz.
 
 ## Radio frequencies BRX
 
-After finding the freqency which was very active, I asked myself the question: "What are all the different "
-One Google search later and I found a website which provides the following table:
+After finding the freqency which was very active, I asked myself the question: "What are all the different frequencies of BRX?".
+One Google search later and I found a [website](https://www.radioreference.com/db/aid/5669) which provides the following table:
 
-| 132.475 |   | BM | CSQ | ATIS          | ATIS                       | AM | Aircraft  |
-|---------|---|----|-----|---------------|----------------------------|----|-----------|
-| 130.550 |   | BM | CSQ | AbelagUnicom  | Abelag Unicom              | AM | Aircraft  |
-| 118.250 |   | BM | CSQ | Approach      | Approach                   | AM | Aircraft  |
-| 120.100 |   | BM | CSQ | Approach      | Approach                   | AM | Aircraft  |
-| 122.500 |   | BM | CSQ | AMC Civil     | Approach Military Crossing | AM | Aircraft  |
-| 121.950 |   | BM | CSQ | Clearance Del | Clearance Delivery         | AM | Aircraft  |
-| 126.625 |   | BM | CSQ | Departure     | Departure                  | AM | Aircraft  |
-| 127.575 |   | BM | CSQ | Final 25L     | Final 25L                  | AM | Aircraft  |
-| 129.725 |   | BM | CSQ | Final 25R     | Final 25R                  | AM | Aircraft  |
-| 118.050 |   | BM | CSQ | Ground        | Ground                     | AM | Aircraft  |
+| Frequency | Type | Tone | Alpha Tag     | Description                | Mode | Tag       |
+|-----------|------|------|---------------|----------------------------|------|-----------|
+| 132.475   | BM   | CSQ  | ATIS          | ATIS                       | AM   | Aircraft  |
+| 130.550   | BM   | CSQ  | AbelagUnicom  | Abelag Unicom              | AM   | Aircraft  |
+| 118.250   | BM   | CSQ  | Approach      | Approach                   | AM   | Aircraft  |
+| 120.100   | BM   | CSQ  | Approach      | Approach                   | AM   | Aircraft  |
+| 122.500   | BM   | CSQ  | AMC Civil     | Approach Military Crossing | AM   | Aircraft  |
+| 121.950   | BM   | CSQ  | Clearance Del | Clearance Delivery         | AM   | Aircraft  |
+| 126.625   | BM   | CSQ  | Departure     | Departure                  | AM   | Aircraft  |
+| 127.575   | BM   | CSQ  | Final 25L     | Final 25L                  | AM   | Aircraft  |
+| 129.725   | BM   | CSQ  | Final 25R     | Final 25R                  | AM   | Aircraft  |
+
+## Final thoughts
 
 Maybe it's an idea for in the future to tune into all these at once. The same youtuber has a video on how to setup
 listening to multiple frequencies at once. [video](https://www.youtube.com/watch?v=RwJqbt85XIA)
@@ -41,3 +43,6 @@ I made a little youtube video if you want to check out this little interaction.
 
 {{< youtube  -2ddU81j2t0 >}}
 
+## References
+
+markdown table generator: https://tableconvert.com/markdown-generator
