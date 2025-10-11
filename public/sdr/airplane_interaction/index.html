@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Airplane interaction | My New Hugo Site</title>
+<title>Airplane interaction | Bytes by Boon projects</title>
 <meta name="keywords" content="">
 <meta name="description" content="Setting up the scanner
 I followed a tutorial on how to setup a radio freqency scanner.
@@ -78,7 +78,7 @@ going above this.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Bytes by Boon projects (Alt + H)">Bytes by Boon projects</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -132,25 +132,32 @@ going above this.</p>
 <p>I live very close to Brussels airport, so I could pick up all these airplanes during their final approach.
 The most active one, at that time, was: 118,250 Mhz.</p>
 <h2 id="radio-frequencies-brx">Radio frequencies BRX<a hidden class="anchor" aria-hidden="true" href="#radio-frequencies-brx">#</a></h2>
-<p>After finding the freqency which was very active, I asked myself the question: &ldquo;What are all the different &quot;
-One Google search later and I found a website which provides the following table:</p>
+<p>After finding the freqency which was very active, I asked myself the question: &ldquo;What are all the different frequencies of BRX?&rdquo;.
+One Google search later and I found a <a href="https://www.radioreference.com/db/aid/5669">website</a> which provides the following table:</p>
 <table>
   <thead>
       <tr>
-          <th>132.475</th>
-          <th></th>
-          <th>BM</th>
-          <th>CSQ</th>
-          <th>ATIS</th>
-          <th>ATIS</th>
-          <th>AM</th>
-          <th>Aircraft</th>
+          <th>Frequency</th>
+          <th>Type</th>
+          <th>Tone</th>
+          <th>Alpha Tag</th>
+          <th>Description</th>
+          <th>Mode</th>
+          <th>Tag</th>
       </tr>
   </thead>
   <tbody>
       <tr>
+          <td>132.475</td>
+          <td>BM</td>
+          <td>CSQ</td>
+          <td>ATIS</td>
+          <td>ATIS</td>
+          <td>AM</td>
+          <td>Aircraft</td>
+      </tr>
+      <tr>
           <td>130.550</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>AbelagUnicom</td>
@@ -160,7 +167,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>118.250</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Approach</td>
@@ -170,7 +176,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>120.100</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Approach</td>
@@ -180,7 +185,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>122.500</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>AMC Civil</td>
@@ -190,7 +194,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>121.950</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Clearance Del</td>
@@ -200,7 +203,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>126.625</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Departure</td>
@@ -210,7 +212,6 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>127.575</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Final 25L</td>
@@ -220,26 +221,16 @@ One Google search later and I found a website which provides the following table
       </tr>
       <tr>
           <td>129.725</td>
-          <td></td>
           <td>BM</td>
           <td>CSQ</td>
           <td>Final 25R</td>
           <td>Final 25R</td>
-          <td>AM</td>
-          <td>Aircraft</td>
-      </tr>
-      <tr>
-          <td>118.050</td>
-          <td></td>
-          <td>BM</td>
-          <td>CSQ</td>
-          <td>Ground</td>
-          <td>Ground</td>
           <td>AM</td>
           <td>Aircraft</td>
       </tr>
   </tbody>
 </table>
+<h2 id="final-thoughts">Final thoughts<a hidden class="anchor" aria-hidden="true" href="#final-thoughts">#</a></h2>
 <p>Maybe it&rsquo;s an idea for in the future to tune into all these at once. The same youtuber has a video on how to setup
 listening to multiple frequencies at once. <a href="https://www.youtube.com/watch?v=RwJqbt85XIA">video</a>
 Here however we have a problem because the maximum sample size of the device I use to monitor the radio frequencies is
@@ -250,6 +241,8 @@ limited to 3.2 Mhz. So in order to do this we will have to order a few more of t
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-2ddU81j2t0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<p>markdown table generator: <a href="https://tableconvert.com/markdown-generator">https://tableconvert.com/markdown-generator</a></p>
 
 
   </div>
@@ -262,7 +255,7 @@ limited to 3.2 Mhz. So in order to do this we will have to order a few more of t
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">My New Hugo Site</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Bytes by Boon projects</a></span> · 
 
     <span>
         Powered by

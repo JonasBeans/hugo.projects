@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Bytes by Boon projects</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Bytes by Boon projects</description>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Oct 2025 23:48:05 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 Oct 2025 00:10:19 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making_a_mini_radio_station</title>
+      <link>http://localhost:1313/sdr/making_a_mini_radio_station/</link>
+      <pubDate>Sun, 12 Oct 2025 00:10:19 +0200</pubDate>
+      <guid>http://localhost:1313/sdr/making_a_mini_radio_station/</guid>
+      <description>&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
+&lt;h1 id=&#34;result&#34;&gt;Result&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m really happy with the final result. And it didn&amp;rsquo;t take that long either!&lt;/p&gt;
+&lt;h2 id=&#34;photos&#34;&gt;Photos&lt;/h2&gt;
+&lt;p&gt;
+
+
+&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_back_view_hu_571e0fa290ac84d3.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Back view&#34;&gt;
+
+
+
+
+
+&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_front_view_hu_de2141c3fe1f590b.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Front view&#34;&gt;
+
+
+
+
+
+&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_top_view_hu_27d37bd6ce4e57d3.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Top view&#34;&gt;
+
+&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Airplane interaction</title>
       <link>http://localhost:1313/sdr/airplane_interaction/</link>
@@ -25,7 +53,13 @@ going above this.&lt;/p&gt;</description>
       <link>http://localhost:1313/sdr/initial_setup/</link>
       <pubDate>Sun, 05 Oct 2025 23:47:45 +0200</pubDate>
       <guid>http://localhost:1313/sdr/initial_setup/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;Every time an airplane passes over us, I tend to open up flight radar to find out all the information about it.
+I use the application FlightRadar24 for this.&lt;/p&gt;
+&lt;h2 id=&#34;welcome-to-sdr&#34;&gt;Welcome to SDR&lt;/h2&gt;
+&lt;p&gt;SDR stands for Software Defined Radio.&lt;/p&gt;
+&lt;h2 id=&#34;rtl-sdr&#34;&gt;RTL SDR&lt;/h2&gt;
+&lt;p&gt;You can use a USB dongle to make a radio receiver from your laptop.A dongle with the RTL2832U chipset should do the trick. This chip can demodulate radio frequencies across a wide bandwith.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

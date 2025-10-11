@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/sdr/airplane_interaction/</loc>
-    <lastmod>2025-10-05T23:48:05+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-05T23:48:05+02:00</lastmod>
+    <lastmod>2025-10-12T00:10:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/sdr/making_a_mini_radio_station/</loc>
+    <lastmod>2025-10-12T00:10:19+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/sdr/</loc>
+    <lastmod>2025-10-12T00:10:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/sdr/airplane_interaction/</loc>
     <lastmod>2025-10-05T23:48:05+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/sdr/initial_setup/</loc>
