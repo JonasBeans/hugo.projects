@@ -4,7 +4,7 @@ draft: false
 title: 'Airplane interaction'
 ---
 ## Setting up the scanner 
-I followed a [tutorial]('https://www.youtube.com/watch?v=EBVU6DTZq-k') on how to setup a radio freqency scanner. 
+I followed a [tutorial](https://www.youtube.com/watch?v=EBVU6DTZq-k) on how to setup a radio freqency scanner. 
 It's a really clear video. So if you want to do the same you can defenitely follow along that video.
 
 A radio scanner allows scanning through a range of radio frequencies and finding the ones that go over a
