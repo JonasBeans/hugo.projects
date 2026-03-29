@@ -9,32 +9,14 @@
     <lastBuildDate>Sun, 12 Oct 2025 00:10:19 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/sdr/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Making_a_mini_radio_station</title>
+      <title>Making a mini radio station</title>
       <link>http://localhost:1313/sdr/making_a_mini_radio_station/</link>
       <pubDate>Sun, 12 Oct 2025 00:10:19 +0200</pubDate>
       <guid>http://localhost:1313/sdr/making_a_mini_radio_station/</guid>
-      <description>&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
-&lt;h1 id=&#34;result&#34;&gt;Result&lt;/h1&gt;
-&lt;p&gt;I&amp;rsquo;m really happy with the final result. And it didn&amp;rsquo;t take that long either!&lt;/p&gt;
-&lt;h2 id=&#34;photos&#34;&gt;Photos&lt;/h2&gt;
-&lt;p&gt;
-
-
-&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_back_view_hu_571e0fa290ac84d3.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Back view&#34;&gt;
-
-
-
-
-
-&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_front_view_hu_de2141c3fe1f590b.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Front view&#34;&gt;
-
-
-
-
-
-&lt;img src=&#34;http://localhost:1313/SDR/Making_a_mini_radio_station/result_top_view_hu_27d37bd6ce4e57d3.jpeg&#34; width=&#34;600&#34; height=&#34;400&#34; alt=&#34;Top view&#34;&gt;
-
-&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;starting&#34;&gt;Starting&lt;/h2&gt;
+&lt;p&gt;After finding out the antenna that comes with the SDR is magnetic, a new project idea was brewing in my head. Would it be possible to make a mini radio station by attaching the atenna to a piece of metal and making a portable system with everyting it needs. Well here we are testing if the idea in my head is viable or just another wild dream. :)&lt;/p&gt;
+&lt;h3 id=&#34;photos&#34;&gt;Photos&lt;/h3&gt;
+&lt;p&gt;These are all the components used for this project. A wooden beam to attach the whole system on. A Raspberry Pi as the&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Airplane interaction</title>
@@ -42,14 +24,14 @@
       <pubDate>Sun, 05 Oct 2025 23:48:05 +0200</pubDate>
       <guid>http://localhost:1313/sdr/airplane_interaction/</guid>
       <description>&lt;h2 id=&#34;setting-up-the-scanner&#34;&gt;Setting up the scanner&lt;/h2&gt;
-&lt;p&gt;I followed a &lt;a href=&#34;&#39;https://www.youtube.com/watch?v=EBVU6DTZq-k&#39;&#34;&gt;tutorial&lt;/a&gt; on how to setup a radio freqency scanner.
+&lt;p&gt;I followed a &lt;a href=&#34;https://www.youtube.com/watch?v=EBVU6DTZq-k&#34;&gt;tutorial&lt;/a&gt; on how to setup a radio freqency scanner.
 It&amp;rsquo;s a really clear video. So if you want to do the same you can defenitely follow along that video.&lt;/p&gt;
 &lt;p&gt;A radio scanner allows scanning through a range of radio frequencies and finding the ones that go over a
 predefined dB (decibels) threshold. If you set it to -60dB for example all the frequencies are matched
 going above this.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Initial_Setup</title>
+      <title>Initial Setup</title>
       <link>http://localhost:1313/sdr/initial_setup/</link>
       <pubDate>Sun, 05 Oct 2025 23:47:45 +0200</pubDate>
       <guid>http://localhost:1313/sdr/initial_setup/</guid>

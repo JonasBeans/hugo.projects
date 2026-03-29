@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ScrapRovers on Bytes by Boon projects</title>
+    <link>http://localhost:1313/scraprover/</link>
+    <description>Recent content in ScrapRovers on Bytes by Boon projects</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Mar 2026 15:54:45 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/scraprover/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making the plan</title>
+      <link>http://localhost:1313/scraprover/scrap-rover/</link>
+      <pubDate>Sun, 29 Mar 2026 15:54:45 +0200</pubDate>
+      <guid>http://localhost:1313/scraprover/scrap-rover/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Today I decided to start a new project that involves a Raspberry PI an IP camera and some wheels I once got
+as a gift. The idea is building a vehicle that can move forward, backward and can make turns. As easy as this
+sounds this should be possble remotely.&lt;/p&gt;
+&lt;p&gt;The IP camera will send a live feed to whatever device is used to watch the stream the camera is sending.
+We had a security camera laying around that was never installed properly so to make use of it now seems appropriate
+for a project called Scrap Rover. &lt;em&gt;chuckle&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

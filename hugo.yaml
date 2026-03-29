@@ -8,3 +8,11 @@ menu:
       name: SDR
       url: /SDR/
       weight: 10
+    - identifier: Scrap Rover
+      name: Scrap Rover
+      url: /Scrap Rover/
+      weight: 10
+    - identifier: Image Recognition
+      name: Image Recognition
+      url: /ImageRecognition/
+      weight: 10
