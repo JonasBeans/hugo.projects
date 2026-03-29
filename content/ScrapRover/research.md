@@ -1,5 +1,5 @@
 ---
-date: '2026-03-29T15:54:45+02:00'
+date: '2026-03-29T23:04:45+02:00'
 draft: false
 title: 'Controls architecture research'
 ---
