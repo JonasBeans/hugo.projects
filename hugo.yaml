@@ -10,7 +10,7 @@ menu:
       weight: 10
     - identifier: Scrap Rover
       name: Scrap Rover
-      url: /Scrap Rover/
+      url: /ScrapRover/
       weight: 10
     - identifier: Image Recognition
       name: Image Recognition
