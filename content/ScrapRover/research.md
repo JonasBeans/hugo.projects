@@ -1,5 +1,8 @@
-# Scrap Rover — Controls & Architecture Notes
-
+---
+date: '2026-03-29T15:54:45+02:00'
+draft: false
+title: 'Controls architecture research'
+---
 ## Overview
 
 The Scrap Rover is a remotely controlled vehicle built from scrap parts: a Raspberry Pi, an IP camera, and wheels. The controller interface is a webpage served by the Pi itself, accessible via Wi-Fi.
