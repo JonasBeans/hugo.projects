@@ -61,3 +61,5 @@ some kind of turning mechanism should be introduced which involves more than jus
 mechanics.
 
 [Offical documentation of the PIN diagram](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio)
+
+{{< img width='500px' src="ScrapRover/Roadmap.png" alt="Back view" >}}
