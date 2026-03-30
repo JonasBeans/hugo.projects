@@ -1,3 +1,8 @@
+---
+date: '2026-03-30T23:57:45+02:00'
+draft: false
+title: 'Discovering Media MTX and FFMPEG'
+---
 ## Installing Media MTX
 
 To start out my journey on discovering how Media MTX works, I installed the binary on my Windows laptop.
