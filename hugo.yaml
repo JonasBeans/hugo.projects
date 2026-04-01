@@ -17,11 +17,15 @@ menu:
       name: SDR
       url: /SDR/
       weight: 10
+    - identifier: Home Lab
+      name: Home Lab
+      url: /HomeLab/
+      weight: 10
     - identifier: Scrap Rover
       name: Scrap Rover
       url: /ScrapRover/
       weight: 10
     - identifier: Image Recognition
       name: Image Recognition
-      url: /ImageRecognition/
-      weight: 10
+      url: /ScrapRover/ImageRecognition/
+      weight: 1
