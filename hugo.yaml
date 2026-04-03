@@ -4,9 +4,8 @@ title: Bytes by Boon projects
 theme: ["PaperMod"]
 params:
   homeInfoParams:
-    Title: Hi there wave
-    Content: Can be Info, links, about...
-
+    Title: Hi, Bytes by Boon welcomes you!
+    Content: This website exists for me to keep track of the shenaningans projects I work on. Feel free to roam around a bit and let me know what you think! 
   socialIcons:
     - name: "GitHub"
       url: "https://github.com/JonasBeans/hugo.projects"
@@ -27,5 +26,11 @@ menu:
       weight: 10
     - identifier: Image Recognition
       name: Image Recognition
+      parent: Scrap Rover
       url: /ScrapRover/ImageRecognition/
       weight: 1
+    - identifier: Controls
+      name: Controls
+      parent: Scrap Rover
+      url: /ScrapRover/Controls
+      weight: 2
