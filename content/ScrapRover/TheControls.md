@@ -1,7 +1,7 @@
 ---
-date: '2026-03-29T15:54:45+02:00'
+date: '2026-04-03'
 draft: false
-title: 'Making the plan'
+title: 'Use a controller for the controls?'
 ---
 
 ## How would the controlls look like
@@ -11,5 +11,4 @@ I was thinking, maybe it would be interesting to move the Scrap Rover with a con
 Beside that if you're connected with a phone maybe also have an option to control it with buttons in the UI. 
 
 ## Resources 
-
-[Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API#:~:text=missing%20Join%20Now-,Connecting%20to%20a%20gamepad,e)%20=%3E%20%7B%20console.)<content of the old file>
+[Gamepad API - javascript](https://shorturl.at/Pig76)
