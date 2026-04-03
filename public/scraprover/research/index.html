@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Controls architecture research | Bytes by Boon projects</title>
+<meta name="keywords" content="">
+<meta name="description" content="Overview
+The Scrap Rover is a remotely controlled vehicle built from scrap parts: a Raspberry Pi, an IP camera, and wheels. The controller interface is a webpage served by the Pi itself, accessible via Wi-Fi.
+
+UI Layout
+The webpage consists of two sections:
+
+Video stream — embedded as an HTML element at the top
+Control buttons — directional buttons below the stream
+
+┌─────────────────────┐
+│                     │
+│    video stream     │
+│                     │
+├─────────────────────┤
+│        [▲]          │
+│    [◄] [▼] [►]      │
+└─────────────────────┘
+PC users can additionally use arrow keys for input.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/scraprover/research/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a482bf00fa5c046040ef7973ad5fdf5657890cacb596c93f1382f664ca542074.css" integrity="sha256-pIK/APpcBGBA73lzrV/fVleJDKy1lsk/E4L2ZMpUIHQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/scraprover/research/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Bytes by Boon projects (Alt + H)">Bytes by Boon projects</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/homelab/" title="Home Lab">
+                    <span>Home Lab</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/scraprover/" title="Scrap Rover">
+                    <span>Scrap Rover</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/sdr/" title="SDR">
+                    <span>SDR</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Controls architecture research
+    </h1>
+    <div class="post-meta"><span title='2026-03-29 23:04:45 +0200 CEST'>March 29, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>The Scrap Rover is a remotely controlled vehicle built from scrap parts: a Raspberry Pi, an IP camera, and wheels. The controller interface is a webpage served by the Pi itself, accessible via Wi-Fi.</p>
+<hr>
+<h2 id="ui-layout">UI Layout<a hidden class="anchor" aria-hidden="true" href="#ui-layout">#</a></h2>
+<p>The webpage consists of two sections:</p>
+<ul>
+<li><strong>Video stream</strong> — embedded as an HTML element at the top</li>
+<li><strong>Control buttons</strong> — directional buttons below the stream</li>
+</ul>
+<pre tabindex="0"><code>┌─────────────────────┐
+│                     │
+│    video stream     │
+│                     │
+├─────────────────────┤
+│        [▲]          │
+│    [◄] [▼] [►]      │
+└─────────────────────┘
+</code></pre><p>PC users can additionally use <strong>arrow keys</strong> for input.</p>
+<hr>
+<h2 id="input-handling">Input Handling<a hidden class="anchor" aria-hidden="true" href="#input-handling">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Input method</th>
+          <th>Events used</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Touch (mobile)</td>
+          <td><code>touchstart</code> / <code>touchend</code></td>
+      </tr>
+      <tr>
+          <td>Mouse (desktop)</td>
+          <td><code>mousedown</code> / <code>mouseup</code></td>
+      </tr>
+      <tr>
+          <td>Keyboard (desktop)</td>
+          <td><code>keydown</code> / <code>keyup</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>All three methods call the same shared WebSocket send function.</p>
+<blockquote>
+<p><strong>Note:</strong> Use <code>preventDefault()</code> on touch events to prevent the page from scrolling when pressing buttons. Buttons should be large touch targets on mobile.</p></blockquote>
+<hr>
+<h2 id="communication--websockets">Communication — WebSockets<a hidden class="anchor" aria-hidden="true" href="#communication--websockets">#</a></h2>
+<p>WebSockets are the chosen technology for sending control commands from the browser to the Pi.</p>
+<p><strong>Why WebSockets:</strong></p>
+<ul>
+<li>Low latency, persistent connection</li>
+<li>No HTTP overhead per command</li>
+<li>Works natively in the browser</li>
+<li>Lightweight server possible with Python (<code>asyncio</code> + <code>websockets</code>)</li>
+</ul>
+<p><strong>Message format:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{ <span style="color:#f92672">&#34;action&#34;</span>: <span style="color:#e6db74">&#34;forward&#34;</span>, <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;start&#34;</span> }
+</span></span><span style="display:flex;"><span>{ <span style="color:#f92672">&#34;action&#34;</span>: <span style="color:#e6db74">&#34;forward&#34;</span>, <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;stop&#34;</span> }
+</span></span></code></pre></div><p>Commands are sent on press (<code>start</code>) and release (<code>stop</code>), enabling held-down movement.</p>
+<h3 id="-watchdog-timer">⚠️ Watchdog Timer<a hidden class="anchor" aria-hidden="true" href="#-watchdog-timer">#</a></h3>
+<p>If the Wi-Fi connection drops, the rover will keep its last state (e.g. keep driving forward).</p>
+<p><strong>Solution:</strong> implement a watchdog on the Pi that stops all motors if no message is received within ~500ms.</p>
+<hr>
+<h2 id="alternative-technologies-considered">Alternative Technologies Considered<a hidden class="anchor" aria-hidden="true" href="#alternative-technologies-considered">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Technology</th>
+          <th>Verdict</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>WebSockets</strong></td>
+          <td>✅ Recommended — simple, low latency, browser-native</td>
+      </tr>
+      <tr>
+          <td><strong>MQTT</strong></td>
+          <td>⚠️ Good alternative if Wi-Fi is unreliable — requires a broker (e.g. Mosquitto)</td>
+      </tr>
+      <tr>
+          <td><strong>WebRTC Data Channels</strong></td>
+          <td>⚠️ Lower latency but significantly more complex to set up</td>
+      </tr>
+      <tr>
+          <td><strong>Bluetooth</strong></td>
+          <td>❌ Requires pairing, breaks web interface concept, limited range</td>
+      </tr>
+      <tr>
+          <td><strong>Raw UDP</strong></td>
+          <td>❌ Browsers cannot send raw UDP — requires a native app</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="video-stream">Video Stream<a hidden class="anchor" aria-hidden="true" href="#video-stream">#</a></h2>
+<p>RTSP (used by the IP camera) cannot be embedded directly in a browser. Two options:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>How</th>
+          <th>Latency</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>FFmpeg → MJPEG</strong></td>
+          <td>Pipe RTSP to MJPEG, serve as HTTP stream, embed with <code>&lt;img src=&quot;...&quot;&gt;</code></td>
+          <td>Moderate</td>
+      </tr>
+      <tr>
+          <td><strong>go2rtc</strong></td>
+          <td>Restream RTSP as WebRTC into the browser</td>
+          <td>Low</td>
+      </tr>
+  </tbody>
+</table>
+<p>MJPEG is the simpler starting point. <code>go2rtc</code> is worth revisiting if latency becomes an issue.</p>
+<hr>
+<h2 id="stack-summary">Stack Summary<a hidden class="anchor" aria-hidden="true" href="#stack-summary">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Technology</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Web server</td>
+          <td>Raspberry Pi (hosts files + WebSocket server)</td>
+      </tr>
+      <tr>
+          <td>Network</td>
+          <td>Pi serves its own Wi-Fi hotspot</td>
+      </tr>
+      <tr>
+          <td>Frontend</td>
+          <td>Plain HTML / CSS / JS (no framework needed)</td>
+      </tr>
+      <tr>
+          <td>Communication</td>
+          <td>WebSockets</td>
+      </tr>
+      <tr>
+          <td>GPIO control</td>
+          <td>Python (<code>RPi.GPIO</code> or <code>gpiozero</code>)</td>
+      </tr>
+      <tr>
+          <td>Video stream</td>
+          <td>FFmpeg → MJPEG (or go2rtc for lower latency)</td>
+      </tr>
+  </tbody>
+</table>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Bytes by Boon projects</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

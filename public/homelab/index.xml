@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HomeLabs on Bytes by Boon projects</title>
+    <link>http://localhost:1313/homelab/</link>
+    <description>Recent content in HomeLabs on Bytes by Boon projects</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup home lab infrastructure</title>
+      <link>http://localhost:1313/homelab/home-lab/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/homelab/home-lab/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;technology&#34;&gt;Technology&lt;/h2&gt;
+&lt;p&gt;I started out using minikube to .
+This however did not have the ability to be easily accessable outside the host.&lt;/p&gt;
+&lt;p&gt;I looked around a bit and there was a technology that did support this.
+Take a look a: &lt;a href=&#34;https://k3s.io/&#34;&gt;k3s&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

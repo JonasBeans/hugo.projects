@@ -100,8 +100,8 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/imagerecognition/" title="Image Recognition">
-                    <span>Image Recognition</span>
+                <a href="http://localhost:1313/homelab/" title="Home Lab">
+                    <span>Home Lab</span>
                 </a>
             </li>
             <li>
@@ -126,6 +126,79 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Milestone: Camera Setup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>So here’s a little update on the camera setup. I have been able to get the camera working and streaming video to my laptop. This is done using a Raspberry Pi on my local network. The camera is not yet connected to the Raspberry Pi directly but that is the next step. The project turned a little into something else. I had to buy Raspberry Pi because my old one seem to be malfunctioning. I can scrap the Scrap in the Scrap Rover project name if you will. But that’s fine ‘cause I can use the PI all sorts of other projects as well.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-04 00:10:45 +0200 CEST'>April 4, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Milestone: Camera Setup" href="http://localhost:1313/scraprover/milestone_camera_setup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Configuring the Raspberry PI
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Upgrade I tested my old Raspberry PI 3 model B&#43; and didn’t start anymore. So I made the upgrade to the Raspberry PI model 5. Making use of PI imager software it was pretty easy to provide an image to start from. It’s was always extra steps to configure an internet connection and enable SSH but with the imager software you can configure that during installation there.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-03 00:00:00 +0000 UTC'>April 3, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Configuring the Raspberry PI" href="http://localhost:1313/scraprover/raspberrypi/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Use a controller for the controls?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>How would the controlls look like I was thinking, maybe it would be interesting to move the Scrap Rover with a controller? This way the camera can be controlled with one joystick and the Rover itself with another.
+Beside that if you’re connected with a phone maybe also have an option to control it with buttons in the UI.
+Resources Gamepad API - javascript
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-03 00:00:00 +0000 UTC'>April 3, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Use a controller for the controls?" href="http://localhost:1313/scraprover/controls/thecontrols/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Discovering Media MTX and FFMPEG
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Installing Media MTX To start out my journey on discovering how Media MTX works, I installed the binary on my Windows laptop.
+It came as .zip file so after extracting this file I was presented with a .exe file.
+Executing this binary resulted in a warning which I ignored and let it run anyway.
+After this a new console window opened which gave the following logs:
+2026/03/30 16:27:40 INF MediaMTX v1.17.0, windows, amd642026/03/30 16:27:40 INF configuration loaded from C:\\\\Projecten\\\\Tools\\\\mediamtx\\\_v1.17.0\\\_windows\\\_amd64\\\\mediamtx.yml2026/03/30 16:27:40 INF \\\[RTSP] listener opened on :8554 (TCP/RTSP), :8000 (UDP/RTP), :8001 (UDP/RTCP)2026/03/30 16:27:40 INF \\\[RTMP] listener opened on :19352026/03/30 16:27:40 INF \\\[HLS] listener opened on :88882026/03/30 16:27:40 INF \\\[WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)2026/03/30 16:27:40 INF \\\[SRT] listener opened on :8890 (UDP) My realization came that this will start some sort of server which can serve request. I haven’t however found a way to configure the source of the video that should be streamed.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 23:57:45 +0200 CEST'>March 30, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Discovering Media MTX and FFMPEG" href="http://localhost:1313/scraprover/media_mtx_research/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Controls architecture research
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview The Scrap Rover is a remotely controlled vehicle built from scrap parts: a Raspberry Pi, an IP camera, and wheels. The controller interface is a webpage served by the Pi itself, accessible via Wi-Fi.
+UI Layout The webpage consists of two sections:
+Video stream — embedded as an HTML element at the top Control buttons — directional buttons below the stream ┌─────────────────────┐│ ││ video stream ││ │├─────────────────────┤│ [▲] ││ [◄] [▼] [►] │└─────────────────────┘ PC users can additionally use arrow keys for input.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-29 23:04:45 +0200 CEST'>March 29, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Controls architecture research" href="http://localhost:1313/scraprover/research/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Making the plan
     </h2>
   </header>
@@ -136,6 +209,21 @@ The IP camera will send a live feed to whatever device is used to watch the stre
   </div>
   <footer class="entry-footer"><span title='2026-03-29 15:54:45 +0200 CEST'>March 29, 2026</span></footer>
   <a class="entry-link" aria-label="post link to Making the plan" href="http://localhost:1313/scraprover/scrap-rover/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Streaming the IP camera with WebRTC
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Introduction Now that the IP camera is confirmed working over RTSP, the next challenge is getting that stream into a browser without plugins or heavy client software. The solution: convert the RTSP stream to WebRTC and serve it directly from the Pi’s own webpage.
+The full pipeline looks like this:
+IP Camera (RTSP) → MediaMTX → WebRTC → Browser WebRTC is natively supported in all modern browsers and brings latency down to under 200ms — a significant improvement over the ~500ms delay observed in VLC.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-29 00:00:00 +0000 UTC'>March 29, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Streaming the IP camera with WebRTC" href="http://localhost:1313/scraprover/rtsp-to-webrtc/"></a>
 </article>
     </main>
     

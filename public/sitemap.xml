@@ -3,16 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-29T17:08:28+02:00</lastmod>
+    <lastmod>2026-04-04T00:10:45+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/imagerecognition/</loc>
-    <lastmod>2026-03-29T17:08:28+02:00</lastmod>
+    <loc>http://localhost:1313/scraprover/milestone_camera_setup/</loc>
+    <lastmod>2026-04-04T00:10:45+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/</loc>
+    <lastmod>2026-04-04T00:10:45+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/raspberrypi/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/controls/thecontrols/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/homelab/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/homelab/home-lab/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/media_mtx_research/</loc>
+    <lastmod>2026-03-30T23:57:45+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/research/</loc>
+    <lastmod>2026-03-29T23:04:45+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/scraprover/scrap-rover/</loc>
     <lastmod>2026-03-29T15:54:45+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/scraprover/</loc>
-    <lastmod>2026-03-29T15:54:45+02:00</lastmod>
+    <loc>http://localhost:1313/tags/mediamtx/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/networking/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rtsp/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/scraprover/rtsp-to-webrtc/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/webrtc/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/sdr/making_a_mini_radio_station/</loc>
     <lastmod>2025-10-12T00:10:19+02:00</lastmod>
@@ -27,7 +66,5 @@
     <lastmod>2025-10-05T23:47:45+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

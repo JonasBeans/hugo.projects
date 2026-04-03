@@ -6,8 +6,92 @@
     <description>Recent content in ScrapRovers on Bytes by Boon projects</description>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2026 15:54:45 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 00:10:45 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/scraprover/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Milestone: Camera Setup</title>
+      <link>http://localhost:1313/scraprover/milestone_camera_setup/</link>
+      <pubDate>Sat, 04 Apr 2026 00:10:45 +0200</pubDate>
+      <guid>http://localhost:1313/scraprover/milestone_camera_setup/</guid>
+      <description>&lt;p&gt;So here&amp;rsquo;s a little update on the camera setup. I have been able to get the camera working and streaming video to my laptop.
+This is done using a Raspberry Pi on my local network. The camera is not yet connected to the Raspberry Pi directly but that is the next step.
+The project turned a little into something else. I had to buy Raspberry Pi because my old one seem to be malfunctioning.
+I can scrap the Scrap in the Scrap Rover project name if you will. But that&amp;rsquo;s fine &amp;lsquo;cause I can use the PI all sorts of other projects as well.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuring the Raspberry PI</title>
+      <link>http://localhost:1313/scraprover/raspberrypi/</link>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scraprover/raspberrypi/</guid>
+      <description>&lt;h2 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h2&gt;
+&lt;p&gt;I tested my old Raspberry PI 3 model B+ and didn&amp;rsquo;t start anymore.
+So I made the upgrade to the Raspberry PI model 5.
+Making use of &lt;a href=&#34;https://www.raspberrypi.com/software/&#34;&gt;PI imager software&lt;/a&gt; it was pretty easy to
+provide an image to start from. It&amp;rsquo;s was always extra steps to configure an internet connection
+and enable SSH but with the imager software you can configure that during installation there.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use a controller for the controls?</title>
+      <link>http://localhost:1313/scraprover/controls/thecontrols/</link>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scraprover/controls/thecontrols/</guid>
+      <description>&lt;h2 id=&#34;how-would-the-controlls-look-like&#34;&gt;How would the controlls look like&lt;/h2&gt;
+&lt;p&gt;I was thinking, maybe it would be interesting to move the Scrap Rover with a controller? This way the camera can be controlled with one joystick and the Rover itself with another.&lt;/p&gt;
+&lt;p&gt;Beside that if you&amp;rsquo;re connected with a phone maybe also have an option to control it with buttons in the UI.&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://shorturl.at/Pig76&#34;&gt;Gamepad API - javascript&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Discovering Media MTX and FFMPEG</title>
+      <link>http://localhost:1313/scraprover/media_mtx_research/</link>
+      <pubDate>Mon, 30 Mar 2026 23:57:45 +0200</pubDate>
+      <guid>http://localhost:1313/scraprover/media_mtx_research/</guid>
+      <description>&lt;h2 id=&#34;installing-media-mtx&#34;&gt;Installing Media MTX&lt;/h2&gt;
+&lt;p&gt;To start out my journey on discovering how Media MTX works, I installed the binary on my Windows laptop.&lt;/p&gt;
+&lt;p&gt;It came as .zip file so after extracting this file I was presented with a .exe file.&lt;/p&gt;
+&lt;p&gt;Executing this binary resulted in a warning which I ignored and let it run anyway.&lt;/p&gt;
+&lt;p&gt;After this a new console window opened which gave the following logs:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;
+2026/03/30 16:27:40 INF MediaMTX v1.17.0, windows, amd64
+
+2026/03/30 16:27:40 INF configuration loaded from C:\\\\Projecten\\\\Tools\\\\mediamtx\\\_v1.17.0\\\_windows\\\_amd64\\\\mediamtx.yml
+
+2026/03/30 16:27:40 INF \\\[RTSP] listener opened on :8554 (TCP/RTSP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+
+2026/03/30 16:27:40 INF \\\[RTMP] listener opened on :1935
+
+2026/03/30 16:27:40 INF \\\[HLS] listener opened on :8888
+
+2026/03/30 16:27:40 INF \\\[WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+
+2026/03/30 16:27:40 INF \\\[SRT] listener opened on :8890 (UDP)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My realization came that this will start some sort of server which can serve request.
+I haven&amp;rsquo;t however found a way to configure the source of the video that should be streamed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Controls architecture research</title>
+      <link>http://localhost:1313/scraprover/research/</link>
+      <pubDate>Sun, 29 Mar 2026 23:04:45 +0200</pubDate>
+      <guid>http://localhost:1313/scraprover/research/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The Scrap Rover is a remotely controlled vehicle built from scrap parts: a Raspberry Pi, an IP camera, and wheels. The controller interface is a webpage served by the Pi itself, accessible via Wi-Fi.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ui-layout&#34;&gt;UI Layout&lt;/h2&gt;
+&lt;p&gt;The webpage consists of two sections:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Video stream&lt;/strong&gt; — embedded as an HTML element at the top&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control buttons&lt;/strong&gt; — directional buttons below the stream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;┌─────────────────────┐
+│                     │
+│    video stream     │
+│                     │
+├─────────────────────┤
+│        [▲]          │
+│    [◄] [▼] [►]      │
+└─────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;PC users can additionally use &lt;strong&gt;arrow keys&lt;/strong&gt; for input.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Making the plan</title>
       <link>http://localhost:1313/scraprover/scrap-rover/</link>
@@ -20,6 +104,20 @@ sounds this should be possble remotely.&lt;/p&gt;
 &lt;p&gt;The IP camera will send a live feed to whatever device is used to watch the stream the camera is sending.
 We had a security camera laying around that was never installed properly so to make use of it now seems appropriate
 for a project called Scrap Rover. &lt;em&gt;chuckle&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Streaming the IP camera with WebRTC</title>
+      <link>http://localhost:1313/scraprover/rtsp-to-webrtc/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scraprover/rtsp-to-webrtc/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Now that the IP camera is confirmed working over RTSP, the next challenge is getting that stream
+into a browser without plugins or heavy client software. The solution: convert the RTSP stream to
+&lt;strong&gt;WebRTC&lt;/strong&gt; and serve it directly from the Pi&amp;rsquo;s own webpage.&lt;/p&gt;
+&lt;p&gt;The full pipeline looks like this:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;IP Camera (RTSP) → MediaMTX → WebRTC → Browser
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;WebRTC is natively supported in all modern browsers and brings latency down to
+&lt;strong&gt;under 200ms&lt;/strong&gt; — a significant improvement over the ~500ms delay observed in VLC.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -62,4 +62,6 @@ mechanics.
 
 [Offical documentation of the PIN diagram](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio)
 
-{{< img width='500px' src="ScrapRover/Roadmap.png" alt="Back view" >}}
+## The RoadMap
+
+{{< svg src="ScrapRover/scrap_rover_project_roadmap.svg" alt="Scrap Rover roadmap" >}}
