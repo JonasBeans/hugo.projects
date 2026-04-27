@@ -34,33 +34,20 @@ The gate resistor and pull-down form a simple voltage divider at low frequencies
 PWM is generated in Python using the `RPi.GPIO` library's software PWM. The script ramps the duty cycle up and down in a loop, creating the pulsating effect visible in the demo:
 
 ```python
-import RPi.GPIO as GPIO
-import time
+from gpiozero import PWMLED
+from time import sleep
 
-PWM_PIN = 18  # BCM numbering
-FREQUENCY = 1000  # Hz
+led = PWMLED(17)
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(PWM_PIN, GPIO.OUT)
+def pulsate(interval):
+    brightness = 0.0
+    while brightness <= 1.0:
+        led.value = min(brightness, 1.0)
+        brightness += interval
+        sleep(0.05);
 
-pwm = GPIO.PWM(PWM_PIN, FREQUENCY)
-pwm.start(0)
-
-try:
-    while True:
-        # Ramp up
-        for dc in range(0, 101, 5):
-            pwm.ChangeDutyCycle(dc)
-            time.sleep(0.05)
-        # Ramp down
-        for dc in range(100, -1, -5):
-            pwm.ChangeDutyCycle(dc)
-            time.sleep(0.05)
-except KeyboardInterrupt:
-    pass
-finally:
-    pwm.stop()
-    GPIO.cleanup()
+while True:
+    pulsate(0.1);
 ```
 
 > **Note:** Software PWM on the Pi has some jitter due to OS scheduling. For motor control, hardware PWM (available on GPIO 12, 13, 18, 19 in BCM) will give smoother results. For this visual demo it's perfectly adequate.
@@ -88,11 +75,8 @@ This POC confirms several things needed for the upcoming H-bridge milestone:
 
 ## What's Next
 
-This single low-side switch is only half the story. To drive a motor in **both directions**, I need an H-bridge — four switches arranged so current can be sent through the motor in either polarity.
+Trying to hook the system up with only a powerbank and getting the light to work with higher voltages. 
+I also want a button on the website to enable and disable the light pulsating to make a step in the direction 
+of controlling the system with a controller and instead of a light using a motor. 
+If it works with the controller I can normally control the motor speed with the joystick of the controller. 
 
-The plan:
-- **4-MOSFET discrete H-bridge** using logic-level N-channel and P-channel MOSFETs, or
-- **Darlington fallback** with TIP120/TIP125 pairs using available salvaged parts (with the trade-off of ~1–2 V Vce(sat) drop at the transistor)
-- Or a dedicated IC like the **DRV8833** or **TB6612FNG** for a cleaner, integrated solution
-
-The MOSFET POC here gives me confidence in the gate drive side. Next up: direction switching.
